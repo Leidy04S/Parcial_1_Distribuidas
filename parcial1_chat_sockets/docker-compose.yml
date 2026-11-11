@@ -1,0 +1,18 @@
+# Examen Parcial 1 - Docker Compose que ejecuta el servidor de chat
+# dentro de un contenedor con sockets e hilos.
+# Los clientes NO van en Docker: se ejecutan en terminales de VS Code.
+
+services:
+  servidor:
+    image: python:3.11-alpine
+    container_name: servidor_chat
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python servidor_chat.py
+    # Publica el puerto 5000 del contenedor en la computadora
+    # anfitriona para que los clientes se puedan conectar.
+    ports:
+      - "5000:5000"
+    stdin_open: true
+    tty: true
