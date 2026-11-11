@@ -28,11 +28,10 @@ Desde la carpeta del proyecto ejecutar:
 docker compose up
 ```
 ### para escribir en el servidor se ejecuta el siguiente comando:
-
-docker attach servidor_chat
 ```bash
-Deberia verse:
+docker attach servidor_chat
 ```
+Deberia verse:
 
 ```
 Servidor de chat escuchando en 0.0.0.0:5000
